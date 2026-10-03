@@ -1,0 +1,10 @@
+*
+!UsrGymManagementSystemGMS/
+!usrGymManagementSystemGMS/**
+!.gitignore
+
+.vs
+Release
+Debug
+obj
+[Bb]in
