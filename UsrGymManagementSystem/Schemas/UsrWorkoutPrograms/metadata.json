@@ -48,6 +48,7 @@
   "A4": "fd579806-8315-4c3b-bac0-3b69116ee8fc",
   "A5": "dc9f3900-e04a-4db4-b02b-f9506c84509d",
   "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd",
+  "E2": 1,
   "E25": true
 }
 + MetaData.Schema.D2 {
@@ -79,6 +80,14 @@
   "E17": "UsrOwnerId",
   "E18": "UsrOwnerName"
 }
++ MetaData.Schema.D2 {
+  "UId": "959f04d5-adc8-5801-c791-a8bcd3fafb56",
+  "A2": "UsrPlannedSessionsPrice",
+  "A3": "fd579806-8315-4c3b-bac0-3b69116ee8fc",
+  "A4": "fd579806-8315-4c3b-bac0-3b69116ee8fc",
+  "A5": "dc9f3900-e04a-4db4-b02b-f9506c84509d",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
 ~ MetaData.Schema.D2 [
   "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
   "e80190a5-03b2-4095-90f7-a193a960adee",
@@ -91,7 +100,8 @@
   "5045a40c-4053-fa56-1724-66502eb5fbc9",
   "819655a1-eeb1-ac52-bbec-efe3ee006e6e",
   "abf0f96e-590e-6482-3698-af3613122243",
-  "42ad6111-aed5-f5fc-67bd-a4b459612a5e"
+  "42ad6111-aed5-f5fc-67bd-a4b459612a5e",
+  "959f04d5-adc8-5801-c791-a8bcd3fafb56"
 ]
 = MetaData.Schema.D20.A2 "UsrWorkoutProgramsEvents"
 + MetaData.Schema.D20.FA1 false

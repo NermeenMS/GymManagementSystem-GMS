@@ -7,6 +7,7 @@
 			<Item Name="Columns.UsrCode.Caption" Value="Code" />
 			<Item Name="Columns.UsrNotes.Caption" Value="Notes" />
 			<Item Name="Columns.UsrOwner.Caption" Value="Owner" />
+			<Item Name="Columns.UsrPlannedSessionsPrice.Caption" Value="Planned Sessions Price,$" />
 			<Item Name="Columns.UsrTitle.Caption" Value="Title" />
 			<Item Name="Columns.UsrWorkoutFrequency.Caption" Value="Workout frequency" />
 		</Items>

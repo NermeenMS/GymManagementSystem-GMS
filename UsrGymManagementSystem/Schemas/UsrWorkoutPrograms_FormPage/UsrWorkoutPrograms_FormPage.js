@@ -123,6 +123,29 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
+				"name": "NumberInput_wy9x6z0",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 3,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrPlannedSessionsPrice_bnv2vt0",
+					"control": "$PDS_UsrPlannedSessionsPrice_bnv2vt0",
+					"readonly": true,
+					"placeholder": "",
+					"labelPosition": "auto",
+					"tooltip": "",
+					"visible": true
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
 				"name": "WorkoutFrequency",
 				"values": {
 					"layoutConfig": {
@@ -688,6 +711,11 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 									}
 								}
 							}
+						}
+					},
+					"PDS_UsrPlannedSessionsPrice_bnv2vt0": {
+						"modelConfig": {
+							"path": "PDS.UsrPlannedSessionsPrice"
 						}
 					}
 				}
