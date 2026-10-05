@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "dfe1c7a0-ef51-4b13-9815-8d27cfb2ca3a",
+      "A2": "UsrWorkoutProgramsMobileRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "fd579806-8315-4c3b-bac0-3b69116ee8fc",
+      "AD2": "EntitySchemaManager",
+      "AD3": "MobileRelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "0291a541-775d-4af2-b7c0-c02c88c1781d",
+            "PageSchemaUId": "853247c3-0641-47b7-8355-370507f21748",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

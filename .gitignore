@@ -1,6 +1,6 @@
 *
-!UsrGymManagementSystemGMS/
-!usrGymManagementSystemGMS/**
+!UsrGymManagementSystem/
+!usrGymManagementSystem/**
 !.gitignore
 
 .vs

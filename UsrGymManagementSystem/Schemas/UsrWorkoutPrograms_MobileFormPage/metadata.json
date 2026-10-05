@@ -1,0 +1,10 @@
+= MetaData.Schema.UId "853247c3-0641-47b7-8355-370507f21748"
+= MetaData.Schema.A2 "UsrWorkoutPrograms_MobileFormPage"
+= MetaData.Schema.A5 "d484d861-d8e5-4a3f-84ad-1d9256189431"
+~ MetaData.Schema.B2 ["aaf8c92a-a9fd-462a-8faf-56f293f7fc53","05d66847-e3ca-469a-b61e-7612fed1bf8d","5d99b711-365c-44ff-ae6e-a98b4e5bd086","0a1e149d-9c33-4fba-92a6-f936468ab9ef"]
+= MetaData.Schema.B6 "a00051f4-cde3-4f3f-b08e-c5ad1a5c735a"
+= MetaData.Schema.HD1 "019c694a-1a3b-4812-b2e5-219b326061ae"
+= MetaData.Schema.HD6 "null"
+- MetaData.Schema.B7
+- MetaData.Schema.HD12
++ MetaData.Schema.B7 false

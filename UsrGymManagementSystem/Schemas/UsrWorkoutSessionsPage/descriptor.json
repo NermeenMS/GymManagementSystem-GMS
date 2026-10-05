@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "ef2d5706-a6e1-4503-9990-75f472c29e1b",
+    "Name": "UsrWorkoutSessionsPage",
+    "ModifiedOnUtc": "\/Date(1791128246000)\/",
+    "Parent": {
+      "UId": "ecdcc8ff-272c-4957-9381-7d74ce17e140",
+      "Name": "BaseMiniPageTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Workout Sessions page"
+  }
+}

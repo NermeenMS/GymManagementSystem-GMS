@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Workout Sessions" />
+			<Item Name="Columns.UsrNumberofparticipants.Caption" Value="Number of participants" />
+			<Item Name="Columns.UsrPrice.Caption" Value="Price" />
+			<Item Name="Columns.UsrSessionsParentWorkOutPrograms.Caption" Value="Sessions Parent WorkOut Programs" />
+			<Item Name="Columns.UsrSessionsStatus.Caption" Value="Sessions Status" />
+			<Item Name="Columns.UsrTrainer.Caption" Value="Trainer" />
+			<Item Name="Columns.UsrWorkoutdate.Caption" Value="Workout date" />
+		</Items>
+	</Group>
+</Resources>

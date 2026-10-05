@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "853247c3-0641-47b7-8355-370507f21748",
+    "Name": "UsrWorkoutPrograms_MobileFormPage",
+    "ModifiedOnUtc": "\/Date(1791048573000)\/",
+    "Parent": {
+      "UId": "019c694a-1a3b-4812-b2e5-219b326061ae",
+      "Name": "MobilePageWithTabsFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Workout programs” mobile form page",
+    "DependsOn": []
+  }
+}

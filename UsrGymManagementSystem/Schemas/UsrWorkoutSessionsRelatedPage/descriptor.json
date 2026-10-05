@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "7ba8acf4-13ec-438e-a32f-b51b251bc587",
+    "Name": "UsrWorkoutSessionsRelatedPage",
+    "ModifiedOnUtc": "\/Date(1791128306000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Workout Sessions (Page settings)",
+    "DependsOn": []
+  }
+}

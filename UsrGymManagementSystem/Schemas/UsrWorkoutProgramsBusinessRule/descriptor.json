@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "c6b3982b-5f86-4957-9c2a-a48e98a6ff3f",
+    "Name": "UsrWorkoutProgramsBusinessRule",
+    "ModifiedOnUtc": "\/Date(1791117061000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Workout programs” (Business rules)",
+    "DependsOn": []
+  }
+}

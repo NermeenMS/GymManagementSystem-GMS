@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Workout programs” list page" />
+			<Item Name="LocalizableStrings.Filters_headerTemplate.Value" Value="Name" />
+			<Item Name="LocalizableStrings.addRecord_nsog1az_caption.Value" Value="Add new" />
+		</Items>
+	</Group>
+</Resources>

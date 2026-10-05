@@ -1,0 +1,35 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "7ba8acf4-13ec-438e-a32f-b51b251bc587",
+      "A2": "UsrWorkoutSessionsRelatedPage",
+      "A5": "dc9f3900-e04a-4db4-b02b-f9506c84509d",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "596c8ce6-6c49-40b3-95c3-81ef6df65d21",
+      "B8": "10.0.0.858",
+      "AD1": "392d6003-18f1-4b35-9646-3ce196e22d25",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+  "Pages": [
+    {
+      "UId": "238bd42f-f1c8-5614-1bee-3b77311251f1",
+      "PageSchemaUId": "ef2d5706-a6e1-4503-9990-75f472c29e1b",
+      "IsDefault": true,
+      "IsSspDefault": false,
+      "Actions": {
+        "Add": false
+      },
+      "Role": "a29a3ba5-4b0d-de11-9a51-005056c00008",
+      "TypeColumnValue": null
+    }
+  ],
+  "TypeColumnUId": null
+}
+    }
+  }
+}

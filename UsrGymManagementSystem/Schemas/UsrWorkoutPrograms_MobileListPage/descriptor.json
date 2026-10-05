@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "4d4e9422-c38a-4afa-aa1f-3c118d06b95a",
+    "Name": "UsrWorkoutPrograms_MobileListPage",
+    "ModifiedOnUtc": "\/Date(1791048573000)\/",
+    "Parent": {
+      "UId": "011e7dda-a763-4535-9b9a-e09eddd047be",
+      "Name": "BaseMobileListTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Workout programs” mobile list page",
+    "DependsOn": []
+  }
+}

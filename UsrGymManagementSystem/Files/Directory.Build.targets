@@ -1,0 +1,19 @@
+<Project>
+	<ItemGroup Condition="'$(PkgPath)' != ''">
+		<Compile Remove="$(PkgPath)/UsrGymManagementSystem/Assemblies/**" />
+		<Compile Remove="$(PkgPath)/UsrGymManagementSystem/Data/**" />
+		<Compile Remove="$(PkgPath)/UsrGymManagementSystem/SqlScripts/**" />
+		<Compile Remove="$(PkgPath)/UsrGymManagementSystem/Schemas\**" />
+		<Compile Remove="$(PkgPath)/UsrGymManagementSystem/Resources/**" />
+		<EmbeddedResource Remove="$(PkgPath)/UsrGymManagementSystem/Assemblies/**" />
+		<EmbeddedResource Remove="$(PkgPath)/UsrGymManagementSystem/Data/**" />
+		<EmbeddedResource Remove="$(PkgPath)/UsrGymManagementSystem/SqlScripts/**" />
+		<EmbeddedResource Remove="$(PkgPath)/UsrGymManagementSystem/Schemas/**" />
+		<EmbeddedResource Remove="$(PkgPath)/UsrGymManagementSystem/Resources/**" />
+		<None Remove="$(PkgPath)/UsrGymManagementSystem/Assemblies/**" />
+		<None Remove="$(PkgPath)/UsrGymManagementSystem/Data/**" />
+		<None Remove="$(PkgPath)/UsrGymManagementSystem/SqlScripts/**" />
+		<None Remove="$(PkgPath)/UsrGymManagementSystem/Schemas/**" />
+		<None Remove="$(PkgPath)/UsrGymManagementSystem/Resources/**" />
+  </ItemGroup>
+</Project>

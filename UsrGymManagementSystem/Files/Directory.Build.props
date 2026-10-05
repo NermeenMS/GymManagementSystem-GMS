@@ -1,0 +1,10 @@
+<Project>
+	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
+		<Compile Include="$(PkgPath)/UsrGymManagementSystem/Schemas/UsrEmployeestmp/UsrEmployeestmp.cs" Condition="Exists('$(PkgPath)/UsrGymManagementSystem/Schemas/UsrEmployeestmp/UsrEmployeestmp.cs')" />
+		<Compile Include="$(PkgPath)/UsrGymManagementSystem/Schemas/UsrSessionStatus/UsrSessionStatus.cs" Condition="Exists('$(PkgPath)/UsrGymManagementSystem/Schemas/UsrSessionStatus/UsrSessionStatus.cs')" />
+		<Compile Include="$(PkgPath)/UsrGymManagementSystem/Schemas/UsrVwEmployees/UsrVwEmployees.cs" Condition="Exists('$(PkgPath)/UsrGymManagementSystem/Schemas/UsrVwEmployees/UsrVwEmployees.cs')" />
+		<Compile Include="$(PkgPath)/UsrGymManagementSystem/Schemas/UsrWorkoutFrequency/UsrWorkoutFrequency.cs" Condition="Exists('$(PkgPath)/UsrGymManagementSystem/Schemas/UsrWorkoutFrequency/UsrWorkoutFrequency.cs')" />
+		<Compile Include="$(PkgPath)/UsrGymManagementSystem/Schemas/UsrWorkoutPrograms/UsrWorkoutPrograms.cs" Condition="Exists('$(PkgPath)/UsrGymManagementSystem/Schemas/UsrWorkoutPrograms/UsrWorkoutPrograms.cs')" />
+		<Compile Include="$(PkgPath)/UsrGymManagementSystem/Schemas/UsrWorkoutSessions/UsrWorkoutSessions.cs" Condition="Exists('$(PkgPath)/UsrGymManagementSystem/Schemas/UsrWorkoutSessions/UsrWorkoutSessions.cs')" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "dafe8b01-ed3d-47be-8fc1-40fad2527199",
+    "Name": "UsrWorkoutProgramsRelatedPage",
+    "ModifiedOnUtc": "\/Date(1791048573000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Workout programs” (Page settings)",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "ab31829f-8fb8-4bd4-81b6-c8ce9d5bf3d8",
+    "Name": "UsrWorkoutFrequency",
+    "ModifiedOnUtc": "\/Date(1791094531000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Workout frequency",
+    "DependsOn": []
+  }
+}

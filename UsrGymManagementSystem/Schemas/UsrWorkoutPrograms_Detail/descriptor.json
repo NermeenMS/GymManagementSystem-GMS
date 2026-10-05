@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "0006c352-422b-4d73-a466-0dcc62c76d4f",
+    "Name": "UsrWorkoutPrograms_Detail",
+    "ModifiedOnUtc": "\/Date(1791048573000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Workout programs” detail",
+    "DependsOn": []
+  }
+}

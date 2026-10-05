@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.2fc6e0fc-614b-b8e6-394b-e198dd902af5.Caption" Value="Apply static filter: Owner" />
+			<Item Name="Caption" Value="Workout programs” (Business rules)" />
+		</Items>
+	</Group>
+</Resources>

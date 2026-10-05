@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "be17da3d-452f-4812-a2cd-5f9f6ab0bdee",
+    "Name": "UsrEmployeestmp",
+    "ModifiedOnUtc": "\/Date(1791113553000)\/",
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Employeestmp",
+    "DependsOn": []
+  }
+}

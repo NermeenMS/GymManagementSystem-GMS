@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Employees" />
+			<Item Name="Columns.UsrFullName.Caption" Value="Full Name" />
+			<Item Name="Columns.UsrId.Caption" Value="Id" />
+			<Item Name="Columns.UsrType.Caption" Value="Type" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEnityValidatingEventSubProcess_f0646c74f291474f9a10143ee868f1c9.Caption" Value="Validating record" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEnityValidatingScriptTask_a553628ef6dc4e09bdcf27e446fdc16f.Caption" Value="BaseEntityValidating" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEnityValidatingStartMessage_b3d5b61f7afe48b5a8cc40317ea9c428.Caption" Value="BaseEnityValidating" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityDeletedScriptTask.Caption" Value="BaseEntityDeletedScriptTask" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityDeletedStartMessage.Caption" Value="BaseEntityDeletedStartMessage" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityDeletedSubProcess.Caption" Value="BaseEntityDeletedSubProcess" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityDeletingEventSubProcess2.Caption" Value="Before deleting record" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityDeletingStartMessage2.Caption" Value="BaseEntityDeleting" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityEventSubProcess1.Caption" Value="After saving record" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntitySavedIndexingTask.Caption" Value="BaseEntitySavedIndexingTask" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntitySavingEventSubProcess.Caption" Value="Before saving record" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntitySavingScriptTask.Caption" Value="BaseEntitySaving" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntitySavingStartMessage.Caption" Value="BaseEntitySaving" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseEntityStartMessage1.Caption" Value="BaseEntitySaved" />
+			<Item Name="EventsProcessSchema.BaseElements.BaseInsertedEventSubProcess.Caption" Value="After adding record" />
+			<Item Name="EventsProcessSchema.BaseElements.ContactDeleted.Caption" Value="ContactDeleted" />
+			<Item Name="EventsProcessSchema.BaseElements.ContactDeleting.Caption" Value="ContactDeleting" />
+			<Item Name="EventsProcessSchema.BaseElements.ContactSaved.Caption" Value="ContactSaved" />
+			<Item Name="EventsProcessSchema.BaseElements.ContactSaving.Caption" Value="ContactSaving" />
+			<Item Name="EventsProcessSchema.BaseElements.DeleteRemindings.Caption" Value="Delete remindings" />
+			<Item Name="EventsProcessSchema.BaseElements.EventSubProcess1.Caption" Value="EventSubProcess1" />
+			<Item Name="EventsProcessSchema.BaseElements.EventSubProcess2.Caption" Value="Event sub-process 2" />
+			<Item Name="EventsProcessSchema.BaseElements.EventSubProcess3_daf6a3f45d524b49beff480baa8b27ec.Caption" Value="ContactDeleted" />
+			<Item Name="EventsProcessSchema.BaseElements.InsertedStartMessage1.Caption" Value="BaseEntityInserted" />
+			<Item Name="EventsProcessSchema.BaseElements.ScriptSynchronizeAnniversary.Caption" Value="ScriptSynchronizeAnniversary" />
+			<Item Name="EventsProcessSchema.BaseElements.ScriptTask3_64c7552c697d40269bb7cafe8513a56d.Caption" Value="Delete relationship entity" />
+			<Item Name="EventsProcessSchema.BaseElements.ScriptTaskInsertedBaseEntity.Caption" Value="Initiate start signals" />
+			<Item Name="EventsProcessSchema.BaseElements.StartMessage3_d2d291d7036e4fbd82b42ab45f34ec81.Caption" Value="ContactDeleted" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Caption" Value="SynchronizeAnniversary" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.ChildEntitySchemaUId.Caption" Value="Subordinate object" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.DefaultValues.Caption" Value="Default values for parent object columns" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.DeletingFilters.Caption" Value="Filters for deleting records" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.MappingColumns.Caption" Value="Connection between columns of parent and subordinate objects" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.MultiRowsSearchFilters.Caption" Value="Filter to select several rows" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.RequiredAllFields.Caption" Value="All fields are required" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.RequiredFields.Caption" Value="Required fields in subordinate object" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeAnniversary.Parameters.SingleRowSearchFilters.Caption" Value="Filter to select single row" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeContactAddressScriptTask.Caption" Value="Synchronize Contact Address" />
+			<Item Name="EventsProcessSchema.BaseElements.SynchronizeContactCommunication.Caption" Value="Synchronize Contact Communication" />
+			<Item Name="EventsProcessSchema.BaseElements.TryProcessCompleteScriptTask1.Caption" Value="TryProcessComplete" />
+			<Item Name="EventsProcessSchema.BaseElements.TryProcessCompleteScriptTask2.Caption" Value="TryProcessComplete" />
+			<Item Name="EventsProcessSchema.BaseElements.UpdateCareerScriptTask.Caption" Value="Update career" />
+			<Item Name="EventsProcessSchema.BaseElements.UpdateRemindings.Caption" Value="Update reminders" />
+			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+			<Item Name="EventsProcessSchema.LaneSets.BaseEntityLaneSet1.Caption" Value="Pool 1" />
+			<Item Name="EventsProcessSchema.LaneSets.BaseEntityLaneSet1.Lanes.BaseEntityLane2.Caption" Value="Lane 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_acee279c7864435f9a3b08e9430ffce9.Caption" Value="Pool 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_acee279c7864435f9a3b08e9430ffce9.Lanes.Lane3_6680beacbb77460093a7ed929baeb872.Caption" Value="Lane 3" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet396.Caption" Value="Pool" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet396.Lanes.Lane1195.Caption" Value="Lane" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_f1fd29fcc12e4fa39f5c7ebf71254d58.Caption" Value="LaneSet 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_f1fd29fcc12e4fa39f5c7ebf71254d58.Lanes.Lane_b417aa0f2779490796caea7759bcd6c7.Caption" Value="Lane 1" />
+			<Item Name="EventsProcessSchema.Methods.AddCommunicationValue.Caption" Value="AddCommunicationValue" />
+			<Item Name="EventsProcessSchema.Methods.CanInitDcmForEntity.Caption" Value="CanInitDcmForEntity" />
+			<Item Name="EventsProcessSchema.Methods.CancelNotEnabledDcmProcess.Caption" Value="CancelNotEnabledDcmProcess" />
+			<Item Name="EventsProcessSchema.Methods.ChangeCareer.Caption" Value="ChangeCareer" />
+			<Item Name="EventsProcessSchema.Methods.CheckIsCareerChanged.Caption" Value="CheckIsCareerChanged" />
+			<Item Name="EventsProcessSchema.Methods.CloseCurrentJob.Caption" Value="CloseCurrentJob" />
+			<Item Name="EventsProcessSchema.Methods.CreateEntitySynchronizationProvider.Caption" Value="Object Method 1" />
+			<Item Name="EventsProcessSchema.Methods.FillCareerDefaultValues.Caption" Value="FillCareerDefaultValues" />
+			<Item Name="EventsProcessSchema.Methods.FillCareerEntity.Caption" Value="FillCareerEntity" />
+			<Item Name="EventsProcessSchema.Methods.FillSgmOrNameField.Caption" Value="FillSgmOrNameField" />
+			<Item Name="EventsProcessSchema.Methods.GetAnniversaryDependentColumns.Caption" Value="GetAnniversaryDependentColumns" />
+			<Item Name="EventsProcessSchema.Methods.GetContactConverter.Caption" Value="GetContactConverter" />
+			<Item Name="EventsProcessSchema.Methods.GetRemindingsGenerator.Caption" Value="GetRemindingsGenerator" />
+			<Item Name="EventsProcessSchema.Methods.IndexEntity.Caption" Value="Object Method 1" />
+			<Item Name="EventsProcessSchema.Methods.InitCanGenerateAnniversaryReminding.Caption" Value="InitCanGenerateAnniversaryReminding" />
+			<Item Name="EventsProcessSchema.Methods.InitDcmOnEntityChanging.Caption" Value="InitDcmOnEntityChanging" />
+			<Item Name="EventsProcessSchema.Methods.IsChangedColumnsMatch.Caption" Value="IsChangedColumnsMatch" />
+			<Item Name="EventsProcessSchema.Methods.IsConditionDataMatch.Caption" Value="IsConditionDataMatch" />
+			<Item Name="EventsProcessSchema.Methods.NamePartColumnChanged.Caption" Value="NamePartColumnChanged" />
+			<Item Name="EventsProcessSchema.Methods.ProcessCompleteExecuting.Caption" Value="ProcessCompleteExecuting" />
+			<Item Name="EventsProcessSchema.Methods.SetName.Caption" Value="SetName" />
+			<Item Name="EventsProcessSchema.Methods.SetSgm.Caption" Value="SetSgm" />
+			<Item Name="EventsProcessSchema.Methods.SynchronizeContactName.Caption" Value="Object Method 1" />
+			<Item Name="EventsProcessSchema.Methods.TryProcessComplete.Caption" Value="TryProcessComplete" />
+			<Item Name="EventsProcessSchema.Methods.UpdateOldCareer.Caption" Value="UpdateOldCareer" />
+			<Item Name="EventsProcessSchema.Parameters.CanGenerateAnniversaryReminding.Caption" Value="CanGenerateAnniversaryReminding" />
+			<Item Name="EventsProcessSchema.Parameters.CanUseDcm.Caption" Value="CanUseDcm" />
+			<Item Name="EventsProcessSchema.Parameters.CommunicationSynchronizer.Caption" Value="CommunicationSynchronizer" />
+			<Item Name="EventsProcessSchema.Parameters.Current.Caption" Value="Current" />
+			<Item Name="EventsProcessSchema.Parameters.DcmEntityUtil.Caption" Value="DcmEntityUtil" />
+			<Item Name="EventsProcessSchema.Parameters.IsCareerChanged.Caption" Value="IsCareerChanged" />
+			<Item Name="EventsProcessSchema.Parameters.IsCareerChanged.DisplayValue" Value="true" />
+			<Item Name="EventsProcessSchema.Parameters.IsCurrentUserPhoroChanged.Caption" Value="IsCurrentUserPhoroChanged. Deprecated since 7.19.0. Use IsCurrentUserPhotoChanged instead" />
+			<Item Name="EventsProcessSchema.Parameters.IsCurrentUserPhotoChanged.Caption" Value="IsCurrentUserPhotoChanged" />
+			<Item Name="EventsProcessSchema.Parameters.IsProcessModeSave.Caption" Value="IsProcessModeSave" />
+			<Item Name="EventsProcessSchema.Parameters.NeedDeleteCareer.Caption" Value="NeedDeleteCareer" />
+			<Item Name="EventsProcessSchema.Parameters.NeedInsertCareer.Caption" Value="NeedInsertCareer" />
+			<Item Name="EventsProcessSchema.Parameters.NeedUpdate.Caption" Value="NeedUpdate" />
+			<Item Name="EventsProcessSchema.Parameters.NeedUpdate.DisplayValue" Value="true" />
+			<Item Name="EventsProcessSchema.Parameters.NeedUpdateCareer.Caption" Value="NeedUpdateCareer" />
+			<Item Name="EventsProcessSchema.Parameters.NextProcessElementReady.Caption" Value="NextProcessElementReady" />
+			<Item Name="EventsProcessSchema.Parameters.PreviousAccountValue.Caption" Value="Previous account value" />
+			<Item Name="EventsProcessSchema.Parameters.ProcessListeners.Caption" Value="ProcessListeners" />
+			<Item Name="EventsProcessSchema.Parameters.ProcessSchemaListeners.Caption" Value="ProcessSchemaListeners" />
+			<Item Name="EventsProcessSchema.Parameters.ProcessSchemaParameter1.Caption" Value="Parameter 1" />
+		</Items>
+	</Group>
+</Resources>

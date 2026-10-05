@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "98ecc41e-43ba-4e7c-b2b3-1201a1e828e0",
+    "Name": "UsrVwEmployees",
+    "ModifiedOnUtc": "\/Date(1791115212000)\/",
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Employees",
+    "DependsOn": []
+  }
+}
