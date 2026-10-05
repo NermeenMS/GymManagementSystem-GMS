@@ -1,7 +1,5 @@
 
 
-namespace Terrasoft.Configuration
-{
     using System.ServiceModel;
     using System.ServiceModel.Web;
     using System.ServiceModel.Activation;
@@ -9,6 +7,8 @@ namespace Terrasoft.Configuration
     using Terrasoft.Web.Common;
     using System;
     using System.Web.SessionState;
+namespace Terrasoft.Configuration
+{
     [ServiceContract]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
     public class UsrSessionsService : BaseService, IReadOnlySessionState
