@@ -1,4 +1,4 @@
-{
+﻿{
   "PackageData": [
     {
       "Row": [
@@ -10,7 +10,7 @@
         {
           "SchemaColumnUId": "215e82ee-20b0-4aa2-af3b-ff06cbc6da52",
           "ColumnName": "Name",
-          "Value": "My applications"
+          "Value": "Gym System"
         }
       ]
     }

@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "0a2389c6-aa95-40bf-a16d-15fdcbbd5002",
     "Name": "SysModuleEntity_UsrWorkoutPrograms",
-    "ModifiedOnUtc": "\/Date(1791048573000)\/",
+    "ModifiedOnUtc": "\/Date(1792470103000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "9c762665-90ad-497b-ac4b-45bb729630a1",
@@ -22,6 +22,13 @@
         "IsKey": false,
         "ColumnName": "TypeColumnUId",
         "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "ModifiedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
       },
       {
         "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",

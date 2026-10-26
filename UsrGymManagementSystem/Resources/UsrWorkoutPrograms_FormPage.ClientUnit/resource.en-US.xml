@@ -4,6 +4,7 @@
 		<Items>
 			<Item Name="Caption" Value="Workout programs” form page" />
 			<Item Name="LocalizableStrings.Active_tooltip.Value" Value="is workout is active" />
+			<Item Name="LocalizableStrings.Button_ido2a3t_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.ExpansionPanel_9n3hy4p_title.Value" Value="Workout Sessions" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_wc24r5c_caption.Value" Value="New" />
 			<Item Name="LocalizableStrings.GridDetailExportDataBtn_i9o8jqq_caption.Value" Value="Export to Excel" />
@@ -13,6 +14,7 @@
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_kon4ctr_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.Input_6lvoo3w_label.Value" Value="Owner Email" />
 			<Item Name="LocalizableStrings.Input_6lvoo3w_tooltip.Value" Value="Manager Email" />
+			<Item Name="LocalizableStrings.MenuItem_e4xloaa_caption.Value" Value="Sessions Total Price" />
 			<Item Name="LocalizableStrings.addRecord_8i72wmh_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_di1tldq_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_k8zngpt_caption.Value" Value="Add new" />

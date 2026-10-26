@@ -80,6 +80,41 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
+				"name": "Button_ido2a3t",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_ido2a3t_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "actions-button-icon",
+					"menuItems": [],
+					"clickMode": "menu"
+				},
+				"parentName": "ActionButtonsContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_e4xloaa",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_e4xloaa_caption)#",
+					"visible": true,
+					"icon": "show-structure-icon",
+					"clicked": {
+						"request": "usr.RunTotalPriceWebServiceRequest"
+					}
+				},
+				"parentName": "Button_ido2a3t",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "UsrTitle",
 				"values": {
 					"layoutConfig": {
@@ -878,7 +913,44 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 					// If validation passes, proceed with saving
 					return next?.handle(request);
 				}
-		}
+		},
+			{
+				request: "usr.RunTotalPriceWebServiceRequest",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Run web service button works...");
+
+					// get id from drive type lookup type object
+					//var typeObject = await request.$context.PDS_UsrDriveType_87u9x8r;
+					//var selectedDriveTypeId = "";
+					//if (typeObject) {
+					//	selectedDriveTypeId = typeObject.value;
+					//}
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+				/* Specify the URL to run web service method. */
+					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+					const transferName = "rest";
+					const serviceName = "UsrSessionService";
+					const methodName = "GetSessionTotalPriceByCode";
+					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+					
+					//const endpoint = "http://localhost/D1_Studio/0/rest/UsrSessionService/GetSessionTotalPriceByCode";
+					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+					
+					const response = await httpClientService.post(endpoint, params);
+					var serviceData = response; 
+                if (!serviceData) {
+					console.log("empty response");
+                    return;
+                }
+					
+					
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			}
+
 
 			
 		]/**SCHEMA_HANDLERS*/,
