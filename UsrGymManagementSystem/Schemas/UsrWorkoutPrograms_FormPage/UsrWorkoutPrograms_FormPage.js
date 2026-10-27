@@ -80,10 +80,10 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
-				"name": "Button_ido2a3t",
+				"name": "AcionsButton",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_ido2a3t_caption)#",
+					"caption": "#ResourceString(AcionsButton_caption)#",
 					"color": "default",
 					"disabled": false,
 					"size": "large",
@@ -109,7 +109,7 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 						"request": "usr.RunTotalPriceWebServiceRequest"
 					}
 				},
-				"parentName": "Button_ido2a3t",
+				"parentName": "AcionsButton",
 				"propertyName": "menuItems",
 				"index": 0
 			},
@@ -556,7 +556,7 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
-				"name": "GridDetail_ny49nde",
+				"name": "Sessions",
 				"values": {
 					"type": "crt.DataGrid",
 					"layoutConfig": {
@@ -619,11 +619,113 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					],
 					"placeholder": false,
 					"visible": true,
-					"fitContent": true
+					"fitContent": true,
+					"activeRow": "$GridDetail_ny49nde_ActiveRow",
+					"selectionState": "$GridDetail_ny49nde_SelectionState",
+					"_selectionOptions": {
+						"attribute": "GridDetail_ny49nde_SelectionState"
+					},
+					"bulkActions": []
 				},
 				"parentName": "GridContainer_9tesfem",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_ny49nde_AddTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Add tag",
+					"icon": "tag-icon",
+					"clicked": {
+						"request": "crt.AddTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_ny49ndeDS",
+							"filters": "$GridDetail_ny49nde | crt.ToCollectionFilters : 'GridDetail_ny49nde' : $GridDetail_ny49nde_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_ny49nde_SelectionState"
+						}
+					},
+					"items": []
+				},
+				"parentName": "Sessions",
+				"propertyName": "bulkActions",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_ny49nde_RemoveTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Remove tag",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.RemoveTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_ny49ndeDS",
+							"filters": "$GridDetail_ny49nde | crt.ToCollectionFilters : 'GridDetail_ny49nde' : $GridDetail_ny49nde_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_ny49nde_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_ny49nde_AddTagsBulkAction",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_ny49nde_ExportToExcelBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Export to Excel",
+					"icon": "export-button-icon",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_ny49nde",
+							"filters": "$GridDetail_ny49nde | crt.ToCollectionFilters : 'GridDetail_ny49nde' : $GridDetail_ny49nde_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_ny49nde_SelectionState"
+						}
+					}
+				},
+				"parentName": "Sessions",
+				"propertyName": "bulkActions",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_ny49nde_MergeBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Merge",
+					"icon": "merge-icon",
+					"clicked": {
+						"request": "crt.MergeRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_ny49ndeDS",
+							"selectionState": "$GridDetail_ny49nde_SelectionState"
+						}
+					}
+				},
+				"parentName": "Sessions",
+				"propertyName": "bulkActions",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_ny49nde_DeleteBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Delete",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.DeleteRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_ny49ndeDS",
+							"filters": "$GridDetail_ny49nde | crt.ToCollectionFilters : 'GridDetail_ny49nde' : $GridDetail_ny49nde_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_ny49nde_SelectionState"
+						}
+					}
+				},
+				"parentName": "Sessions",
+				"propertyName": "bulkActions",
+				"index": 3
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -694,6 +796,7 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 							"path": "PDS.UsrOwnerEmail_56o356e"
 						}
 					},
+					
 					"GridDetail_ny49nde": {
 						"isCollection": true,
 						"modelConfig": {
@@ -949,7 +1052,89 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);
 				}
+			},
+
+			{
+		request: "usr.CalculatePlannedSessionPriceRequest", // Custom request name
+		handler: async (request, next) => {
+			const recordId = await request.$context.Id;
+			debugger;
+			if (!recordId) {
+				return next(handle);
 			}
+
+			// 1. Create a query to fetch the sessions
+			const sessionModel = await createModel({
+				type: "DataModel",
+				config: {
+					type: "BaseEntity",
+					name: "GridDetail_ny49ndeDS_UsrSessionsStatus" // ⚠️ Change this to your exact Session Object code
+				}
+			});
+
+			// 2. Apply filters: Connected to this workout program AND Status is Planned
+			// ⚠️ Change UsrWorkoutProgramId and UsrStatus to your exact column names
+			const filterGroup = new FilterGroup();
+			await filterGroup.add(
+				"WorkoutProgramFilter",
+				new Filter({
+					type: "CompareFilter",
+					leftExpression: new ColumnExpression({ columnPath: "GridDetail_ny49ndeDS_Id" }),
+					comparisonType: "Equal",
+					rightExpression: new ParameterExpression({ value: recordId })
+				})
+			);
+			await filterGroup.add(
+				"StatusFilter",
+				new Filter({
+					type: "CompareFilter",
+					leftExpression: new ColumnExpression({ columnPath: "GridDetail_ny49ndeDS_UsrSessionsStatus" }),
+					comparisonType: "Equal",
+					rightExpression: new ParameterExpression({ value: "Planned" }) // ⚠️ Use the exact string or Id value of your Planned status
+				})
+			);
+
+			// 3. Fetch the prices
+			// ⚠️ Change UsrSessionPrice to your exact Session Price column name
+			const records = await sessionModel.load({
+				attributes: ["GridDetail_ny49ndeDS_UsrPrice"], 
+				filters: filterGroup
+			});
+
+			// 4. Sum up the prices
+			let total = 0;
+			records.forEach(item => {
+				const price = item.UsrSessionPrice || 0;
+				total += price;
+			});
+
+			// 5. Update the target field on the screen instantly
+			request.$context.PDS_UsrPlannedSessionsPrice_bnv2vt0 = total;
+
+			return next(handle);
+		}
+	},
+	{
+		request: "crt.HandleViewModelAttributeChangeRequest",
+		handler: async (request, next) => {
+			// This catches any changes made to the child grid layout on the page
+			// ⚠️ Change 'GridDetail_Sessions' to the actual internal Name of your Session list/grid element on the page
+			try{
+				debugger;
+			if (request.attributeName === "GridDetail_ny49ndeDS") {
+				await request.$context.executeRequest({
+					type: "usr.CalculatePlannedSessionPriceRequest"
+				});
+			}
+			}
+			catch(error)
+			{
+				console.error("Save validation error:", error);
+			}
+			return next(handle);
+		}
+	}
+			
 
 
 			
