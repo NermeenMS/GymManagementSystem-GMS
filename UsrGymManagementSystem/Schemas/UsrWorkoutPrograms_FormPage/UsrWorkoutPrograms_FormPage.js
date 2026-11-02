@@ -1058,9 +1058,8 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 		request: "usr.CalculatePlannedSessionPriceRequest", // Custom request name
 		handler: async (request, next) => {
 			const recordId = await request.$context.Id;
-			debugger;
 			if (!recordId) {
-				return next(handle);
+				return handle(request);
 			}
 
 			// 1. Create a query to fetch the sessions
@@ -1079,7 +1078,7 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 				"WorkoutProgramFilter",
 				new Filter({
 					type: "CompareFilter",
-					leftExpression: new ColumnExpression({ columnPath: "GridDetail_ny49ndeDS_Id" }),
+					leftExpression: new ColumnExpression({ columnPath: "UsrWorkoutProgramId" }),
 					comparisonType: "Equal",
 					rightExpression: new ParameterExpression({ value: recordId })
 				})
@@ -1088,7 +1087,7 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 				"StatusFilter",
 				new Filter({
 					type: "CompareFilter",
-					leftExpression: new ColumnExpression({ columnPath: "GridDetail_ny49ndeDS_UsrSessionsStatus" }),
+					leftExpression: new ColumnExpression({ columnPath: "UsrStatus" }),
 					comparisonType: "Equal",
 					rightExpression: new ParameterExpression({ value: "Planned" }) // ⚠️ Use the exact string or Id value of your Planned status
 				})
@@ -1097,7 +1096,7 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 			// 3. Fetch the prices
 			// ⚠️ Change UsrSessionPrice to your exact Session Price column name
 			const records = await sessionModel.load({
-				attributes: ["GridDetail_ny49ndeDS_UsrPrice"], 
+				attributes: ["UsrSessionPrice"], 
 				filters: filterGroup
 			});
 
@@ -1111,7 +1110,7 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 			// 5. Update the target field on the screen instantly
 			request.$context.PDS_UsrPlannedSessionsPrice_bnv2vt0 = total;
 
-			return next(handle);
+			return handle(request);
 		}
 	},
 	{
@@ -1119,19 +1118,12 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 		handler: async (request, next) => {
 			// This catches any changes made to the child grid layout on the page
 			// ⚠️ Change 'GridDetail_Sessions' to the actual internal Name of your Session list/grid element on the page
-			try{
-				debugger;
-			if (request.attributeName === "GridDetail_ny49ndeDS") {
+			if (request.attributeName === "GridDetail_Sessions") {
 				await request.$context.executeRequest({
 					type: "usr.CalculatePlannedSessionPriceRequest"
 				});
 			}
-			}
-			catch(error)
-			{
-				console.error("Save validation error:", error);
-			}
-			return next(handle);
+			return handle(request);
 		}
 	}
 			
