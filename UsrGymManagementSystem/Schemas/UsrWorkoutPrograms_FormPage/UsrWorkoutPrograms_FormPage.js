@@ -1,4 +1,4 @@
-define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -99,10 +99,10 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
-				"name": "MenuItem_e4xloaa",
+				"name": "PlannedSessionsTotalPrice",
 				"values": {
 					"type": "crt.MenuItem",
-					"caption": "#ResourceString(MenuItem_e4xloaa_caption)#",
+					"caption": "#ResourceString(PlannedSessionsTotalPrice_caption)#",
 					"visible": true,
 					"icon": "show-structure-icon",
 					"clicked": {
@@ -173,7 +173,7 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					"placeholder": "",
 					"labelPosition": "auto",
 					"tooltip": "",
-					"visible": true
+					"visible": false
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -796,7 +796,6 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 							"path": "PDS.UsrOwnerEmail_56o356e"
 						}
 					},
-					
 					"GridDetail_ny49nde": {
 						"isCollection": true,
 						"modelConfig": {
@@ -1022,15 +1021,13 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 				/* Implementation of the custom query handler. */
 				handler: async (request, next) => {
 					console.log("Run web service button works...");
-
+debugger;
 					// get id from drive type lookup type object
 					//var typeObject = await request.$context.PDS_UsrDriveType_87u9x8r;
 					//var selectedDriveTypeId = "";
 					//if (typeObject) {
 					//	selectedDriveTypeId = typeObject.value;
 					//}
-					/* Create an instance of the HTTP client from @creatio-devkit/common. */
-					const httpClientService = new sdk.HttpClientService();
 				/* Specify the URL to run web service method. */
 					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
 					const transferName = "rest";
@@ -1041,7 +1038,10 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 					//const endpoint = "http://localhost/D1_Studio/0/rest/UsrSessionService/GetSessionTotalPriceByCode";
 					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
 					
-					const response = await httpClientService.post(endpoint, params);
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+					
+					const response = await httpClientService.post(endpoint);
 					var serviceData = response; 
                 if (!serviceData) {
 					console.log("empty response");
@@ -1113,7 +1113,7 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 			return handle(request);
 		}
 	},
-	{
+	/*{
 		request: "crt.HandleViewModelAttributeChangeRequest",
 		handler: async (request, next) => {
 			// This catches any changes made to the child grid layout on the page
@@ -1125,7 +1125,7 @@ const sysProcessElementLog = await sysProcessElementLogModel.load({
 			}
 			return handle(request);
 		}
-	}
+	}*/
 			
 
 

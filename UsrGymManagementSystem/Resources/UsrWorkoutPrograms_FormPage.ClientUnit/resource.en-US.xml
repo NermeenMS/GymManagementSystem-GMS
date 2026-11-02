@@ -14,7 +14,7 @@
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_kon4ctr_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.Input_6lvoo3w_label.Value" Value="Owner Email" />
 			<Item Name="LocalizableStrings.Input_6lvoo3w_tooltip.Value" Value="Manager Email" />
-			<Item Name="LocalizableStrings.MenuItem_e4xloaa_caption.Value" Value="Sessions Total Price" />
+			<Item Name="LocalizableStrings.PlannedSessionsTotalPrice_caption.Value" Value="Planned Sessions Total Price" />
 			<Item Name="LocalizableStrings.addRecord_8i72wmh_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_di1tldq_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_k8zngpt_caption.Value" Value="Add new" />

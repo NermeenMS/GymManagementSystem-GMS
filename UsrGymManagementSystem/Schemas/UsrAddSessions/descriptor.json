@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "7acce4e6-1c18-47d8-be2f-fc715e158845",
+    "Name": "UsrAddSessions",
+    "ModifiedOnUtc": "\/Date(1793179987000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Auto Add Sessions",
+    "DependsOn": []
+  }
+}

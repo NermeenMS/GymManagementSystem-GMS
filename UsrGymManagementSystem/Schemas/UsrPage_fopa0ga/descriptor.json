@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "0a8f9f77-229e-472b-826d-8636b49ef634",
+    "Name": "UsrPage_fopa0ga",
+    "ModifiedOnUtc": "\/Date(1793160506000)\/",
+    "Parent": {
+      "UId": "97e48060-149c-408f-9f17-8ba82c400249",
+      "Name": "PageWithAreaFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "TestPage"
+  }
+}

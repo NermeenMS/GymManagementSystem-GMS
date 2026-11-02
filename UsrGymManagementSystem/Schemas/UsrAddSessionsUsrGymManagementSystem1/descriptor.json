@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "206032a4-da9c-4fc8-b6a0-24b9de306fcb",
+    "Name": "UsrAddSessionsUsrGymManagementSystem1",
+    "ModifiedOnUtc": "\/Date(1793612272000)\/",
+    "Parent": {
+      "UId": "7acce4e6-1c18-47d8-be2f-fc715e158845",
+      "Name": "UsrAddSessions"
+    },
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Auto Add Sessions",
+    "DependsOn": []
+  }
+}

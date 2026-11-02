@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "857ffbe9-f84e-48d8-8465-08a8f605f426",
+    "Name": "UsrSessionTotalPricePopup",
+    "ModifiedOnUtc": "\/Date(1793156737000)\/",
+    "Parent": {
+      "UId": "97e48060-149c-408f-9f17-8ba82c400249",
+      "Name": "PageWithAreaFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Session Total Price Popup"
+  }
+}

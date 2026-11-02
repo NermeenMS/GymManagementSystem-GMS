@@ -4,6 +4,7 @@ namespace Terrasoft.Configuration
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
+    using System.Runtime.Serialization;
     using System.ServiceModel;
     using System.ServiceModel.Activation;
     using System.ServiceModel.Web;
@@ -42,7 +43,7 @@ namespace Terrasoft.Configuration
         // Optional: If you need to filter by status, put it in the ON clause 
         // so it doesn't accidentally turn the Left Join into an Inner Join
         .And("UsrWorkoutSessions", "UsrSessionsStatusId")
-        .IsEqual(Column.Parameter(new Guid("3B287E23-8ED6-4FD6-BF62-C6367E438CF9")))
+        .IsEqual(Column.Parameter(new Guid("3b287e23-8ed6-4fd6-bf62-c6367e438cf9")))
 
     // 5. (Optional) Filter by a specific program if needed. 
     // If 'workoutPCode' is actually the Program's ID, use "Id". If it's the string Code, use "Code".
@@ -55,7 +56,7 @@ namespace Terrasoft.Configuration
             {
                 using (var reader = select.ExecuteReader(dbExecutor))
                 {
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         // Func.Coalesce guarantees this will never be DBNull
 
@@ -78,9 +79,12 @@ namespace Terrasoft.Configuration
             return "OK!";
         }
     }
-	       public class ProgramPriceDto
+    [DataContract]
+    public class ProgramPriceDto
     {
+        [DataMember]
         public string Code { get; set; }
+        [DataMember]
         public decimal TotalPrice { get; set; }
     }
 }
