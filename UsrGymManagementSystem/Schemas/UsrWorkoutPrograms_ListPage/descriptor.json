@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "1b673a06-10e6-43c6-a9e2-b2b4fd161bc6",
     "Name": "UsrWorkoutPrograms_ListPage",
-    "ModifiedOnUtc": "\/Date(1793168052000)\/",
+    "ModifiedOnUtc": "\/Date(1793637072000)\/",
     "Parent": {
       "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
       "Name": "ListPageV3Template"

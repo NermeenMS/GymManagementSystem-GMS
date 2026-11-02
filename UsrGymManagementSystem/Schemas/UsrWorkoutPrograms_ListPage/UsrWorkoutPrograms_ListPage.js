@@ -203,71 +203,86 @@ define("UsrWorkoutPrograms_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]
 
     request: "crt.ShowTotalPricePopupRequest",
     handler: async (request, next) => {
-        try {
-            // 1. Fetch the data directly in the handler
+try {
+    const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+    const endpoint = Terrasoft.combinePath(baseUrl, "rest", "UsrSessionService", "GetSessionTotalPriceByCode");
+    const httpClientService = new sdk.HttpClientService();
+    const response = await httpClientService.post(endpoint);
 
-			const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
-					const transferName = "rest";
-					const serviceName = "UsrSessionService";
-					const methodName = "GetSessionTotalPriceByCode";
-					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
-					const httpClientService = new sdk.HttpClientService();
-					
-					const response = await httpClientService.post(endpoint);
+    if (!response.ok) throw new Error(`Service failed with status ${response.status}`);
 
-            //console.log("Service Response Status:", response.status);
-			
-            if (!response.ok) {
-    //const errorText = await response.text();
-    console.error("Service Error Details:", errorText);
-    throw new Error(`Service failed with status ${response.status}`);
-}
-            
-            const result = await response;
-            const dataList = result.d || result;
-           if (!dataList || !dataList.body.GetSessionTotalPriceByCodeResult || dataList.body.GetSessionTotalPriceByCodeResult.length === 0) {
-                await request.$context.executeRequest({
-                    type: "crt.ShowDialogRequest",
-                    $context: request.$context,
-                    dialogConfig: {
-                        data: {
-                            title: "Total Price of Planned Sessions",
-                            message: "No planned sessions found.",
-                            actions: [{ key: "OK", config: { color: "primary", caption: "Close" } }]
-                        }
-                    }
-                });
-                return next?.handle(request);
-            }
-const resObj=dataList.body.GetSessionTotalPriceByCodeResult;
-						 debugger;
-            // 5. Format data for the dialog display
-            const formattedList = resObj.map(item => `Code: ${item.Code}   ....   Total Price: $${item.TotalPrice}`).join('\n');
-
-            // 6. Show the native Creatio Dialog
-            await request.$context.executeRequest({
-                type: "crt.ShowDialogRequest",
-                $context: request.$context,
-                dialogConfig: {
-                    data: {
-                        title: "Total Price of Planned Sessions",
-                        message: formattedList,
-                        actions: [{
-                            key: "OK",
-                            config: { color: "primary", caption: "Close" }
-                        }]
-                    }
-                }
-            });
-
-        } catch (error) {
-            console.error("Service Error:", error);
-            await request.$context.executeRequest({
-                type: "crt.NotificationRequest",
-                message: "Failed to load total prices. Check console for details."
-            });
-        }
+    const result = response.json ? await response.json() : response;
+    const dataList = result.d || result;
+    
+    if (!dataList?.body?.GetSessionTotalPriceByCodeResult?.length) {
+        await request.$context.executeRequest({
+            type: "crt.ShowDialogRequest",
+            $context: request.$context,
+            dialogConfig: { data: { title: "Info", message: "No planned sessions found.", actions: [{ key: "OK" }] } }
+        });
         return next?.handle(request);
+    }
+
+    const resObj = dataList.body.GetSessionTotalPriceByCodeResult;
+
+    // 1. Build a full HTML document string
+    const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Total Price of Planned Sessions</title>
+            <style>
+                body { font-family: 'Open Sans', Arial, sans-serif; padding: 20px; background: #f9f9f9; color: #333; }
+                h2 { color: #0052A3; font-weight: 600; margin-top: 0; }
+                table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                th, td { border: 1px solid #e0e0e0; padding: 10px 15px; text-align: left; }
+                th { background-color: #f5f5f5; font-weight: 600; }
+                tr:nth-child(even) { background-color: #fafafa; }
+                .close-btn { 
+                    margin-top: 20px; padding: 10px 24px; 
+                    background: #0052A3; color: white; border: none; 
+                    border-radius: 4px; cursor: pointer; font-size: 14px; float: right;
+                }
+                .close-btn:hover { background: #003d7a; }
+            </style>
+        </head>
+        <body>
+            <h2>Total Price of Planned Sessions</h2>
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Total Price</th></tr>
+                </thead>
+                <tbody>
+                    ${resObj.map(item => `
+                        <tr>
+                            <td>${item.Code || 'N/A'}</td>
+                            <td>$${Number(item.TotalPrice || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+            <button class="close-btn" onclick="window.close()">Close</button>
+        </body>
+        </html>
+    `;
+
+    // 2. Create a Blob and open it in a new window
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    
+    // Note: Popup blockers usually allow this because it is triggered by a user click
+    window.open(url, '_blank', 'width=600,height=500,scrollbars=yes,resizable=yes');
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+} catch (error) {
+    console.error("Service Error:", error);
+    await request.$context.executeRequest({
+        type: "crt.NotificationRequest",
+        message: "Failed to load total prices."
+    });
+}
+return next?.handle(request);
     }
 
 

@@ -88,7 +88,7 @@ define("UsrWorkoutPrograms_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "left-icon",
-					"visible": true,
+					"visible": false,
 					"icon": "actions-button-icon",
 					"menuItems": [],
 					"clickMode": "menu"
